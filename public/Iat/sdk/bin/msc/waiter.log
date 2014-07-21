@@ -1,0 +1,428 @@
+============================================================
+Time  2014/06/08 13:09:39 776 
+============================================================
+[2014/06/08 13:09:39 779] waiter     91   waiter loaded!  
+[2014/06/08 13:09:39 790] network    248  update_iplist  
+[2014/06/08 13:09:39 793] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:09:39 794] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:09:39 795] waiter     151  last gc at  1402232979  
+[2014/06/08 13:09:39 798] network    336  chunkedhttp  
+[2014/06/08 13:09:39 800] waiter     151  last gc at  1402232979  
+[2014/06/08 13:09:39 801] network    248  update_iplist  
+[2014/06/08 13:09:39 803] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:09:39 804] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:09:39 805] waiter     151  last gc at  1402232979  
+[2014/06/08 13:09:39 807] network    47   gethttpresp2  nil  1028  
+[2014/06/08 13:09:39 808] waiter     151  last gc at  1402232979  
+[2014/06/08 13:09:39 810] network    22   dns resp  0  
+[2014/06/08 13:09:39 812] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/08 13:09:39 814] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/08 13:09:39 815] network    22   dns resp  0  
+[2014/06/08 13:09:39 816] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/08 13:09:39 818] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/08 13:09:39 925] network    72   connected  
+[2014/06/08 13:09:39 927] network    72   connected  
+[2014/06/08 13:09:39 930] network    75   send ok  96  
+[2014/06/08 13:09:39 953] network    75   send ok  96  
+[2014/06/08 13:09:40 039] network    78   readable  
+[2014/06/08 13:09:40 042] network    318  update iplist http resp  nil  0  udata(932c824) 
+[2014/06/08 13:09:40 044] network    325  update iplist ok  
+[2014/06/08 13:09:40 094] network    78   readable  
+[2014/06/08 13:09:40 096] network    318  update iplist http resp  nil  0  udata(932e2e4) 
+[2014/06/08 13:09:40 097] network    325  update iplist ok  
+[2014/06/08 13:09:44 809] network    49   resp timeout!  
+[2014/06/08 13:09:44 812] network    605  port1028 http resp  nil  10114  nil  
+============================================================
+Time  2014/06/08 13:10:12 942 
+============================================================
+[2014/06/08 13:10:12 943] waiter     91   waiter loaded!  
+[2014/06/08 13:10:12 947] network    248  update_iplist  
+[2014/06/08 13:10:12 949] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:10:12 950] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:10:12 952] waiter     151  last gc at  1402233012  
+[2014/06/08 13:10:12 953] network    336  chunkedhttp  
+[2014/06/08 13:10:12 955] waiter     151  last gc at  1402233012  
+[2014/06/08 13:10:12 956] network    22   dns resp  0  
+[2014/06/08 13:10:12 958] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/08 13:10:12 959] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/08 13:10:12 966] network    248  update_iplist  
+[2014/06/08 13:10:12 968] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:10:12 969] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:10:12 972] waiter     151  last gc at  1402233012  
+[2014/06/08 13:10:12 975] network    47   gethttpresp2  nil  1028  
+[2014/06/08 13:10:12 976] waiter     151  last gc at  1402233012  
+[2014/06/08 13:10:12 978] network    22   dns resp  0  
+[2014/06/08 13:10:12 979] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/08 13:10:12 980] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/08 13:10:13 164] network    72   connected  
+[2014/06/08 13:10:13 165] network    72   connected  
+[2014/06/08 13:10:13 172] network    75   send ok  96  
+[2014/06/08 13:10:13 174] network    75   send ok  96  
+[2014/06/08 13:10:13 438] network    78   readable  
+[2014/06/08 13:10:13 492] network    318  update iplist http resp  nil  0  udata(83b3814) 
+[2014/06/08 13:10:13 494] network    325  update iplist ok  
+[2014/06/08 13:10:13 498] network    78   readable  
+[2014/06/08 13:10:13 517] network    318  update iplist http resp  nil  0  udata(83c7bb4) 
+[2014/06/08 13:10:13 533] network    325  update iplist ok  
+[2014/06/08 13:10:17 977] network    49   resp timeout!  
+[2014/06/08 13:10:17 985] network    605  port1028 http resp  nil  10114  nil  
+============================================================
+Time  2014/06/08 13:11:58 139 
+============================================================
+[2014/06/08 13:11:58 141] waiter     91   waiter loaded!  
+[2014/06/08 13:11:58 150] network    248  update_iplist  
+[2014/06/08 13:11:58 153] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:11:58 155] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:11:58 158] waiter     151  last gc at  1402233118  
+[2014/06/08 13:11:58 161] network    336  chunkedhttp  
+[2014/06/08 13:11:58 165] waiter     151  last gc at  1402233118  
+[2014/06/08 13:11:58 166] network    248  update_iplist  
+[2014/06/08 13:11:58 168] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:11:58 169] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:11:58 171] waiter     151  last gc at  1402233118  
+[2014/06/08 13:11:58 173] network    47   gethttpresp2  nil  1028  
+[2014/06/08 13:11:58 174] waiter     151  last gc at  1402233118  
+[2014/06/08 13:11:58 176] network    22   dns resp  0  
+[2014/06/08 13:11:58 177] network    157  gethttpresp dns ok  117.121.56.8  
+[2014/06/08 13:11:58 179] network    47   gethttpresp2  117.121.56.8  80  
+[2014/06/08 13:11:58 180] network    22   dns resp  0  
+[2014/06/08 13:11:58 183] network    157  gethttpresp dns ok  117.121.56.8  
+[2014/06/08 13:11:58 184] network    47   gethttpresp2  117.121.56.8  80  
+[2014/06/08 13:11:58 215] network    72   connected  
+[2014/06/08 13:11:58 218] network    72   connected  
+[2014/06/08 13:11:58 226] network    75   send ok  96  
+[2014/06/08 13:11:58 228] network    75   send ok  96  
+[2014/06/08 13:11:58 353] network    78   readable  
+[2014/06/08 13:11:58 429] network    318  update iplist http resp  nil  0  udata(993dd64) 
+[2014/06/08 13:11:58 431] network    325  update iplist ok  
+[2014/06/08 13:11:58 435] network    78   readable  
+[2014/06/08 13:11:58 445] network    318  update iplist http resp  nil  0  udata(9922414) 
+[2014/06/08 13:11:58 448] network    325  update iplist ok  
+============================================================
+Time  2014/06/08 13:12:12 158 
+============================================================
+[2014/06/08 13:12:12 159] waiter     91   waiter loaded!  
+[2014/06/08 13:12:12 162] network    248  update_iplist  
+[2014/06/08 13:12:12 164] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:12:12 166] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:12:12 167] waiter     151  last gc at  1402233132  
+[2014/06/08 13:12:12 170] network    336  chunkedhttp  
+[2014/06/08 13:12:12 171] waiter     151  last gc at  1402233132  
+[2014/06/08 13:12:12 173] network    22   dns resp  0  
+[2014/06/08 13:12:12 174] network    157  gethttpresp dns ok  117.121.56.8  
+[2014/06/08 13:12:12 175] network    47   gethttpresp2  117.121.56.8  80  
+[2014/06/08 13:12:12 183] network    248  update_iplist  
+[2014/06/08 13:12:12 184] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:12:12 186] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:12:12 187] waiter     151  last gc at  1402233132  
+[2014/06/08 13:12:12 189] network    47   gethttpresp2  nil  1028  
+[2014/06/08 13:12:12 190] waiter     151  last gc at  1402233132  
+[2014/06/08 13:12:12 193] network    22   dns resp  0  
+[2014/06/08 13:12:12 194] network    157  gethttpresp dns ok  117.121.56.8  
+[2014/06/08 13:12:12 195] network    47   gethttpresp2  117.121.56.8  80  
+[2014/06/08 13:12:12 227] network    72   connected  
+[2014/06/08 13:12:12 234] network    72   connected  
+[2014/06/08 13:12:12 242] network    75   send ok  96  
+[2014/06/08 13:12:12 245] network    75   send ok  96  
+[2014/06/08 13:12:12 354] network    78   readable  
+[2014/06/08 13:12:12 497] network    318  update iplist http resp  nil  0  udata(8b5d504) 
+[2014/06/08 13:12:12 526] network    325  update iplist ok  
+[2014/06/08 13:12:12 529] network    78   readable  
+[2014/06/08 13:12:12 531] network    318  update iplist http resp  nil  0  udata(8b59434) 
+[2014/06/08 13:12:12 534] network    325  update iplist ok  
+============================================================
+Time  2014/06/08 13:12:22 687 
+============================================================
+[2014/06/08 13:12:22 688] waiter     91   waiter loaded!  
+[2014/06/08 13:12:22 689] network    248  update_iplist  
+[2014/06/08 13:12:22 692] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:12:22 695] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:12:22 702] waiter     151  last gc at  1402233142  
+[2014/06/08 13:12:22 704] network    336  chunkedhttp  
+[2014/06/08 13:12:22 706] waiter     151  last gc at  1402233142  
+[2014/06/08 13:12:22 707] network    248  update_iplist  
+[2014/06/08 13:12:22 709] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:12:22 710] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:12:22 711] waiter     151  last gc at  1402233142  
+[2014/06/08 13:12:22 713] network    47   gethttpresp2  nil  1028  
+[2014/06/08 13:12:22 716] waiter     151  last gc at  1402233142  
+[2014/06/08 13:12:22 717] network    22   dns resp  0  
+[2014/06/08 13:12:22 718] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/08 13:12:22 720] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/08 13:12:22 721] network    22   dns resp  0  
+[2014/06/08 13:12:22 724] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/08 13:12:22 725] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/08 13:12:22 757] network    72   connected  
+[2014/06/08 13:12:22 758] network    75   send ok  96  
+[2014/06/08 13:12:22 764] network    72   connected  
+[2014/06/08 13:12:22 768] network    75   send ok  96  
+[2014/06/08 13:12:22 894] network    78   readable  
+[2014/06/08 13:12:22 969] network    318  update iplist http resp  nil  0  udata(812e02c) 
+[2014/06/08 13:12:22 972] network    325  update iplist ok  
+[2014/06/08 13:12:22 975] network    78   readable  
+[2014/06/08 13:12:23 006] network    318  update iplist http resp  nil  0  udata(81275cc) 
+[2014/06/08 13:12:23 028] network    325  update iplist ok  
+============================================================
+Time  2014/06/08 13:12:33 133 
+============================================================
+[2014/06/08 13:12:33 134] waiter     91   waiter loaded!  
+[2014/06/08 13:12:33 138] network    248  update_iplist  
+[2014/06/08 13:12:33 140] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:12:33 142] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:12:33 143] waiter     151  last gc at  1402233153  
+[2014/06/08 13:12:33 145] network    336  chunkedhttp  
+[2014/06/08 13:12:33 147] waiter     151  last gc at  1402233153  
+[2014/06/08 13:12:33 149] network    22   dns resp  0  
+[2014/06/08 13:12:33 150] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/08 13:12:33 152] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/08 13:12:33 156] network    248  update_iplist  
+[2014/06/08 13:12:33 158] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/08 13:12:33 159] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/08 13:12:33 160] waiter     151  last gc at  1402233153  
+[2014/06/08 13:12:33 163] network    47   gethttpresp2  nil  1028  
+[2014/06/08 13:12:33 164] waiter     151  last gc at  1402233153  
+[2014/06/08 13:12:33 165] network    22   dns resp  0  
+[2014/06/08 13:12:33 167] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/08 13:12:33 168] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/08 13:12:33 200] network    72   connected  
+[2014/06/08 13:12:33 203] network    75   send ok  96  
+[2014/06/08 13:12:33 214] network    72   connected  
+[2014/06/08 13:12:33 216] network    75   send ok  96  
+[2014/06/08 13:12:33 339] network    78   readable  
+[2014/06/08 13:12:33 431] network    318  update iplist http resp  nil  0  udata(938307c) 
+[2014/06/08 13:12:33 433] network    325  update iplist ok  
+[2014/06/08 13:12:33 437] network    78   readable  
+[2014/06/08 13:12:33 492] network    318  update iplist http resp  nil  0  udata(938566c) 
+[2014/06/08 13:12:33 494] network    325  update iplist ok  
+[2014/06/08 13:12:38 165] network    49   resp timeout!  
+[2014/06/08 13:12:38 167] network    605  port1028 http resp  nil  10114  nil  
+============================================================
+Time  2014/06/09 04:20:14 916 
+============================================================
+[2014/06/09 04:20:14 917] waiter     91   waiter loaded!  
+[2014/06/09 04:20:14 961] network    248  update_iplist  
+[2014/06/09 04:20:14 963] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:20:14 964] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:20:14 965] waiter     151  last gc at  1402287614  
+[2014/06/09 04:20:14 967] network    336  chunkedhttp  
+[2014/06/09 04:20:14 969] waiter     151  last gc at  1402287614  
+[2014/06/09 04:20:14 970] network    22   dns resp  0  
+[2014/06/09 04:20:14 972] network    157  gethttpresp dns ok  59.107.24.11  
+[2014/06/09 04:20:14 973] network    47   gethttpresp2  59.107.24.11  80  
+[2014/06/09 04:20:14 978] network    248  update_iplist  
+[2014/06/09 04:20:14 980] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:20:14 981] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:20:14 983] waiter     151  last gc at  1402287614  
+[2014/06/09 04:20:14 985] network    47   gethttpresp2  nil  1028  
+[2014/06/09 04:20:14 988] waiter     151  last gc at  1402287614  
+[2014/06/09 04:20:14 990] network    22   dns resp  0  
+[2014/06/09 04:20:14 991] network    157  gethttpresp dns ok  59.107.24.11  
+[2014/06/09 04:20:14 992] network    47   gethttpresp2  59.107.24.11  80  
+[2014/06/09 04:20:15 024] network    72   connected  
+[2014/06/09 04:20:15 028] network    72   connected  
+[2014/06/09 04:20:15 035] network    75   send ok  96  
+[2014/06/09 04:20:15 041] network    75   send ok  96  
+[2014/06/09 04:20:15 134] network    78   readable  
+[2014/06/09 04:20:15 241] network    318  update iplist http resp  nil  0  udata(9a7ac3c) 
+[2014/06/09 04:20:15 244] network    325  update iplist ok  
+[2014/06/09 04:20:15 247] network    78   readable  
+[2014/06/09 04:20:15 276] network    318  update iplist http resp  nil  0  udata(9a61834) 
+[2014/06/09 04:20:15 279] network    325  update iplist ok  
+============================================================
+Time  2014/06/09 04:20:57 598 
+============================================================
+[2014/06/09 04:20:57 599] waiter     91   waiter loaded!  
+[2014/06/09 04:20:57 602] network    248  update_iplist  
+[2014/06/09 04:20:57 606] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:20:57 607] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:20:57 608] waiter     151  last gc at  1402287657  
+[2014/06/09 04:20:57 610] network    336  chunkedhttp  
+[2014/06/09 04:20:57 612] waiter     151  last gc at  1402287657  
+[2014/06/09 04:20:57 613] network    22   dns resp  0  
+[2014/06/09 04:20:57 615] network    157  gethttpresp dns ok  59.107.24.7  
+[2014/06/09 04:20:57 617] network    47   gethttpresp2  59.107.24.7  80  
+[2014/06/09 04:20:57 621] network    248  update_iplist  
+[2014/06/09 04:20:57 623] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:20:57 625] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:20:57 627] waiter     151  last gc at  1402287657  
+[2014/06/09 04:20:57 628] network    47   gethttpresp2  nil  1028  
+[2014/06/09 04:20:57 631] waiter     151  last gc at  1402287657  
+[2014/06/09 04:20:57 633] network    22   dns resp  0  
+[2014/06/09 04:20:57 634] network    157  gethttpresp dns ok  59.107.24.7  
+[2014/06/09 04:20:57 636] network    47   gethttpresp2  59.107.24.7  80  
+[2014/06/09 04:20:57 667] network    72   connected  
+[2014/06/09 04:20:57 669] network    75   send ok  96  
+[2014/06/09 04:20:57 676] network    72   connected  
+[2014/06/09 04:20:57 677] network    75   send ok  96  
+[2014/06/09 04:20:57 796] network    78   readable  
+[2014/06/09 04:20:57 892] network    318  update iplist http resp  nil  0  udata(8df7974) 
+[2014/06/09 04:20:57 894] network    325  update iplist ok  
+[2014/06/09 04:20:57 898] network    78   readable  
+[2014/06/09 04:20:57 903] network    318  update iplist http resp  nil  0  udata(8df7a3c) 
+[2014/06/09 04:20:57 910] network    325  update iplist ok  
+[2014/06/09 04:21:02 631] network    49   resp timeout!  
+[2014/06/09 04:21:02 632] network    605  port1028 http resp  nil  10114  nil  
+============================================================
+Time  2014/06/09 04:26:20 214 
+============================================================
+[2014/06/09 04:26:20 216] waiter     91   waiter loaded!  
+[2014/06/09 04:26:20 231] network    248  update_iplist  
+[2014/06/09 04:26:20 233] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:26:20 234] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:26:20 235] waiter     151  last gc at  1402287980  
+[2014/06/09 04:26:20 238] network    336  chunkedhttp  
+[2014/06/09 04:26:20 240] waiter     151  last gc at  1402287980  
+[2014/06/09 04:26:20 241] network    22   dns resp  0  
+[2014/06/09 04:26:20 242] network    157  gethttpresp dns ok  116.213.69.201  
+[2014/06/09 04:26:20 244] network    47   gethttpresp2  116.213.69.201  80  
+[2014/06/09 04:26:20 253] network    248  update_iplist  
+[2014/06/09 04:26:20 254] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:26:20 255] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:26:20 257] waiter     151  last gc at  1402287980  
+[2014/06/09 04:26:20 259] network    47   gethttpresp2  nil  1028  
+[2014/06/09 04:26:20 261] waiter     151  last gc at  1402287980  
+[2014/06/09 04:26:20 262] network    22   dns resp  0  
+[2014/06/09 04:26:20 263] network    157  gethttpresp dns ok  116.213.69.201  
+[2014/06/09 04:26:20 265] network    47   gethttpresp2  116.213.69.201  80  
+[2014/06/09 04:26:20 298] network    72   connected  
+[2014/06/09 04:26:20 301] network    72   connected  
+[2014/06/09 04:26:20 307] network    75   send ok  96  
+[2014/06/09 04:26:20 313] network    75   send ok  96  
+[2014/06/09 04:26:20 435] network    78   readable  
+[2014/06/09 04:26:20 537] network    318  update iplist http resp  nil  0  udata(9bbd8c4) 
+[2014/06/09 04:26:20 538] network    325  update iplist ok  
+[2014/06/09 04:26:20 542] network    78   readable  
+[2014/06/09 04:26:20 552] network    318  update iplist http resp  nil  0  udata(9bd1cec) 
+[2014/06/09 04:26:20 559] network    325  update iplist ok  
+[2014/06/09 04:26:25 262] network    49   resp timeout!  
+[2014/06/09 04:26:25 273] network    605  port1028 http resp  nil  10114  nil  
+============================================================
+Time  2014/06/09 04:26:32 637 
+============================================================
+[2014/06/09 04:26:32 638] waiter     91   waiter loaded!  
+[2014/06/09 04:26:32 640] network    248  update_iplist  
+[2014/06/09 04:26:32 641] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:26:32 643] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:26:32 645] waiter     151  last gc at  1402287992  
+[2014/06/09 04:26:32 648] network    336  chunkedhttp  
+[2014/06/09 04:26:32 650] waiter     151  last gc at  1402287992  
+[2014/06/09 04:26:32 651] network    22   dns resp  0  
+[2014/06/09 04:26:32 653] network    157  gethttpresp dns ok  116.213.69.201  
+[2014/06/09 04:26:32 654] network    47   gethttpresp2  116.213.69.201  80  
+[2014/06/09 04:26:32 663] network    248  update_iplist  
+[2014/06/09 04:26:32 665] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:26:32 666] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:26:32 667] waiter     151  last gc at  1402287992  
+[2014/06/09 04:26:32 669] network    47   gethttpresp2  nil  1028  
+[2014/06/09 04:26:32 671] waiter     151  last gc at  1402287992  
+[2014/06/09 04:26:32 672] network    22   dns resp  0  
+[2014/06/09 04:26:32 673] network    157  gethttpresp dns ok  116.213.69.201  
+[2014/06/09 04:26:32 675] network    47   gethttpresp2  116.213.69.201  80  
+[2014/06/09 04:26:32 709] network    72   connected  
+[2014/06/09 04:26:32 712] network    72   connected  
+[2014/06/09 04:26:32 718] network    75   send ok  96  
+[2014/06/09 04:26:32 724] network    75   send ok  96  
+[2014/06/09 04:26:32 811] network    78   readable  
+[2014/06/09 04:26:32 882] network    318  update iplist http resp  nil  0  udata(978a37c) 
+[2014/06/09 04:26:32 885] network    325  update iplist ok  
+[2014/06/09 04:26:32 889] network    78   readable  
+[2014/06/09 04:26:32 893] network    318  update iplist http resp  nil  0  udata(979ecbc) 
+[2014/06/09 04:26:32 929] network    325  update iplist ok  
+[2014/06/09 04:26:37 671] network    49   resp timeout!  
+[2014/06/09 04:26:37 675] network    605  port1028 http resp  nil  10114  nil  
+============================================================
+Time  2014/06/09 04:35:39 303 
+============================================================
+[2014/06/09 04:35:39 304] waiter     91   waiter loaded!  
+[2014/06/09 04:35:39 312] network    248  update_iplist  
+[2014/06/09 04:35:39 313] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:35:39 315] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:35:39 316] waiter     151  last gc at  1402288539  
+[2014/06/09 04:35:39 317] network    336  chunkedhttp  
+[2014/06/09 04:35:39 319] waiter     151  last gc at  1402288539  
+[2014/06/09 04:35:39 328] network    22   dns resp  0  
+[2014/06/09 04:35:39 339] network    157  gethttpresp dns ok  59.107.24.7  
+[2014/06/09 04:35:39 341] network    47   gethttpresp2  59.107.24.7  80  
+[2014/06/09 04:35:39 347] network    248  update_iplist  
+[2014/06/09 04:35:39 348] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:35:39 350] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:35:39 351] waiter     151  last gc at  1402288539  
+[2014/06/09 04:35:39 354] network    47   gethttpresp2  nil  1028  
+[2014/06/09 04:35:39 357] waiter     151  last gc at  1402288539  
+[2014/06/09 04:35:39 358] network    22   dns resp  0  
+[2014/06/09 04:35:39 359] network    157  gethttpresp dns ok  59.107.24.7  
+[2014/06/09 04:35:39 361] network    47   gethttpresp2  59.107.24.7  80  
+[2014/06/09 04:35:39 423] network    72   connected  
+[2014/06/09 04:35:39 426] network    75   send ok  96  
+[2014/06/09 04:35:39 442] network    72   connected  
+[2014/06/09 04:35:39 476] network    75   send ok  96  
+[2014/06/09 04:35:39 584] network    78   readable  
+[2014/06/09 04:35:39 649] network    318  update iplist http resp  nil  0  udata(8a8573c) 
+[2014/06/09 04:35:39 666] network    325  update iplist ok  
+[2014/06/09 04:35:39 670] network    78   readable  
+[2014/06/09 04:35:39 711] network    318  update iplist http resp  nil  0  udata(8a6d8fc) 
+[2014/06/09 04:35:39 714] network    325  update iplist ok  
+============================================================
+Time  2014/06/09 04:47:38 424 
+============================================================
+[2014/06/09 04:47:38 426] waiter     91   waiter loaded!  
+[2014/06/09 04:47:38 428] network    248  update_iplist  
+[2014/06/09 04:47:38 430] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:47:38 432] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:47:38 433] waiter     151  last gc at  1402289258  
+[2014/06/09 04:47:38 435] network    336  chunkedhttp  
+[2014/06/09 04:47:38 437] waiter     151  last gc at  1402289258  
+[2014/06/09 04:47:38 438] network    22   dns resp  0  
+[2014/06/09 04:47:38 441] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/09 04:47:38 442] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/09 04:47:38 454] network    248  update_iplist  
+[2014/06/09 04:47:38 455] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/06/09 04:47:38 456] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/06/09 04:47:38 459] waiter     151  last gc at  1402289258  
+[2014/06/09 04:47:38 469] network    47   gethttpresp2  nil  1028  
+[2014/06/09 04:47:38 470] waiter     151  last gc at  1402289258  
+[2014/06/09 04:47:38 471] network    22   dns resp  0  
+[2014/06/09 04:47:38 473] network    157  gethttpresp dns ok  59.107.24.5  
+[2014/06/09 04:47:38 474] network    47   gethttpresp2  59.107.24.5  80  
+[2014/06/09 04:47:38 505] network    72   connected  
+[2014/06/09 04:47:38 509] network    75   send ok  96  
+[2014/06/09 04:47:38 530] network    72   connected  
+[2014/06/09 04:47:38 605] network    78   readable  
+[2014/06/09 04:47:38 660] network    318  update iplist http resp  nil  0  udata(9966634) 
+[2014/06/09 04:47:38 662] network    325  update iplist ok  
+[2014/06/09 04:47:38 703] network    75   send ok  96  
+[2014/06/09 04:47:38 712] network    78   readable  
+[2014/06/09 04:47:38 716] network    318  update iplist http resp  nil  0  udata(99937a4) 
+[2014/06/09 04:47:38 780] network    325  update iplist ok  
+============================================================
+Time  2014/07/03 00:51:07 855 
+============================================================
+[2014/07/03 00:51:07 855] waiter     91   waiter loaded!  
+[2014/07/03 00:51:07 856] network    248  update_iplist  
+[2014/07/03 00:51:07 857] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/07/03 00:51:07 857] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/07/03 00:51:07 863] waiter     151  last gc at  1404319867  
+[2014/07/03 00:51:07 864] network    336  chunkedhttp  
+[2014/07/03 00:51:07 865] waiter     151  last gc at  1404319867  
+[2014/07/03 00:51:07 868] network    248  update_iplist  
+[2014/07/03 00:51:07 869] network    171  gethttpresp3  http://dev.voicecloud.cn:80/ip_list.txt  standard  
+[2014/07/03 00:51:07 875] network    153  gethttpresp  http://dev.voicecloud.cn:80/ip_list.txt  
+[2014/07/03 00:51:07 877] waiter     151  last gc at  1404319867  
+[2014/07/03 00:51:07 878] network    47   gethttpresp2  nil  1028  
+[2014/07/03 00:51:07 879] waiter     151  last gc at  1404319867  
+[2014/07/03 00:51:07 881] network    22   dns resp  0  
+[2014/07/03 00:51:07 882] network    157  gethttpresp dns ok  117.121.56.3  
+[2014/07/03 00:51:07 883] network    47   gethttpresp2  117.121.56.3  80  
+[2014/07/03 00:51:07 888] network    22   dns resp  0  
+[2014/07/03 00:51:07 894] network    157  gethttpresp dns ok  117.121.56.3  
+[2014/07/03 00:51:07 895] network    47   gethttpresp2  117.121.56.3  80  
+[2014/07/03 00:51:07 924] network    72   connected  
+[2014/07/03 00:51:07 928] network    75   send ok  96  
+[2014/07/03 00:51:07 969] network    72   connected  
+[2014/07/03 00:51:07 002] network    78   readable  
+[2014/07/03 00:51:08 087] network    318  update iplist http resp  nil  0  udata(8402c6b8) 
+[2014/07/03 00:51:08 090] network    325  update iplist ok  
+[2014/07/03 00:51:08 092] network    75   send ok  96  
+[2014/07/03 00:51:08 093] network    78   readable  
+[2014/07/03 00:51:08 229] network    318  update iplist http resp  nil  0  udata(8400bfe8) 
+[2014/07/03 00:51:08 230] network    325  update iplist ok  

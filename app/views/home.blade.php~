@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ZH">
+
+<head>
+  <meta charset="utf-8">
+  <title>新声-课程列表</title>
+  <meta name="description" content="新声-听障儿童语言训练辅助工具">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ HTML::style('css/home.css') }}
+</head>
+
+<body>
+  <div id="apDiv26">
+    <img src="img/home/Homepage_Stone_3.png" width="110" height="56" />
+  </div>
+  <div id="apDiv27">
+    <img src="img/home/Homepage_Stone_2.png" width="69" height="62" />
+  </div>
+  <div id="apDiv29">
+    <img src="img/home/Homepage_Trees_1.png" width="97" height="109" />
+  </div>
+  <div id="apDiv30">
+    <img src="img/home/Homepage_Trees_3.png" width="63" height="85" />
+  </div>
+  <div id="apDiv31">
+    <img src="img/home/Homepage_Trees_1.png" width="97" height="116" />
+  </div>
+  <div id="apDiv32">
+    <img src="img/home/Homepage_Trees_2.png" width="84" height="116" />
+  </div>
+  <div id="apDiv33">
+    <img src="img/home/Homepage_Stone_1.png" width="106" height="83" />
+  </div>
+  <div id="apDiv34">
+    <img src="img/home/Homepage_Trees_3.png" width="63" height="85" />
+  </div>
+  <div id="apDiv36">
+    <img src="img/home/Homepage_Trees_1.png" width="97" height="109" />
+  </div>
+  <div id="apDiv37">
+    <img src="img/home/Homepage_Trees_2.png" width="84" height="116" />
+  </div>
+  <div id="apDiv38">
+    <img src="img/home/Homepage_Trees_3.png" width="63" height="85" />
+  </div>
+  <div id="apDiv39">
+    <img src="img/home/Homepage_Stone_2.png" width="69" height="62" />
+  </div>
+  <div id="apDiv56">
+    <img src="img/home/Homepage_Trees_1.png" width="97" height="109" />
+  </div>
+  <div id="apDiv57">
+    <img src="img/home/Homepage_Stone_3.png" width="110" height="56" />
+  </div>
+  <div id="apDiv58">
+    <img src="img/home/Homepage_Stone_1.png" width="106" height="83" />
+  </div>
+  <div id="apDiv59">
+    <img src="img/home/Homepage_Trees_3.png" width="63" height="85" />
+  </div>
+  <div id="apDiv60">
+    <img src="img/home/Homepage_Trees_1.png" width="97" height="109" />
+  </div>
+  <div id="apDiv61">
+    <img src="img/home/Homepage_Trees_4.png" width="74" height="100" />
+  </div>
+  <div id="apDiv62">
+    <img src="img/home/Homepage_Stone_2.png" width="69" height="62" />
+  </div>
+  <div id="apDiv63">
+    <img src="img/home/Homepage_Trees_2.png" width="84" height="116" />
+  </div>
+
+
+  <div id="path1">
+    <img src="img/home/Homepage_Line_3(From Start).png" width="156" height="63" />
+  </div>
+
+  <div id="apDiv1">
+    <a class="line4" href="add.html"></a>
+  </div>
+  <div id="apDiv3">
+    <a class="line5" href="add.html"></a>
+  </div>
+  <div id="apDiv5">
+    <a class="line6" href="add.html"></a>
+  </div>
+  <div id="apDiv7">
+    <a class="line1" href="add.html"></a>
+  </div>
+  <div id="apDiv9">
+    <a class="line5" href="add.html"></a>
+  </div>
+  <div id="apDiv13">
+    <a class="line4" href="add.html"></a>
+  </div>
+  <div id="apDiv15">
+    <a class="line5" href="add.html"></a>
+  </div>
+  <div id="apDiv17">
+    <a class="line2" href="add.html"></a>
+  </div>
+  <div id="apDiv20">
+    <a class="line4" href="add.html"></a>
+  </div>
+  <div id="apDiv22">
+    <a class="line5" href="add.html"></a>
+  </div>
+  <div id="apDiv24">
+    <a class="line6" href="add.html"></a>
+  </div>
+  <div id="apDiv28">
+    <a class="line1" href="add.html"></a>
+  </div>
+  <div id="apDiv41">
+    <a class="line5" href="add.html"></a>
+  </div>
+  <div id="apDiv43">
+    <a class="line2" href="add.html"></a>
+  </div>
+  <div id="apDiv44">
+    <a class="line4" href="add.html"></a>
+  </div>
+  <div id="apDiv46">
+    <a class="line5" href="add.html"></a>
+  </div>
+  <div id="apDiv51">
+    <a class="line4" href="add.html"></a>
+  </div>
+  <div id="apDiv52">
+    <a class="line5" href="add.html"></a>
+  </div>
+  <div id="apDiv54">
+    <a class="line6" href="add.html"></a>
+  </div>
+
+  <div id="content">
+    <img id="startNode" src="img/home/Homepage_Start.png" />
+
+    {{ $name }}
+    <!-- <div id="grape" class="pic_bg_orange">
+      <a href="learn.html">
+        <img src="img/home/Homepage_Pic_Grape.png" class="pic">
+        <img class="star" src="img/home/threestars.png">
+        <p class="title">葡萄</p>
+      </a>
+    </div>
+    <div id="apDiv2" class="pic_bg_orange">
+      <a href="">
+        <img src="img/home/Homepage_Pic_Apple.png" class="pic">
+        <img class="star" src="img/home/twostars.png">
+        <p class="title">苹果</p>
+      </a>
+    </div>
+
+    <div id="apDiv4" class="pic_bg_orange">
+      <a href="">
+        <img src="img/home/Homepage_Pic_Peach.png" class="pic">
+        <img class="star" src="img/home/onestar.png">
+        <p class="title">桃子</p>
+      </a>
+    </div>
+
+    <div id="apDiv6" class="pic_bg_orange">
+      <a href="">
+        <img src="img/home/Homepage_Pic_Watermelon.png" class="pic" />
+        <p class="title">西瓜</p>
+      </a>
+    </div> -->
+
+<!--     <div id="apDiv8" class="pic_bg_grey">
+      <a href="">
+        <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+        <p class="title">樱桃</p>
+      </a>
+    </div>
+
+    <div id="apDiv12" class="pic_bg_grey">
+      <a href="">
+        <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+        <p class="title">橙子</p>
+      </a>
+    </div>
+
+    <div id="apDiv14" class="pic_bg_grey">
+      <a href="">
+        <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+        <p class="title">梨</p>
+      </a>
+    </div>
+
+  </div>
+
+  <div id="apDiv16" class="pic_bg_grey">
+    <a href="/record">
+      <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+      <p class="title">哈密瓜</p>
+    </a>
+  </div>
+
+  <div id="apDiv19" class="pic_bg_grey">
+    <a href="/record">
+      <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+      <p class="title">火龙果</p>
+    </a>
+  </div>
+</div>
+
+<div id="apDiv21" class="pic_bg_grey">
+  <a href="/record">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+    <p class="title">香蕉</p>
+  </a>
+</div>
+
+<div id="apDiv23" class="pic_bg_grey">
+  <a href="/record">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+    <p class="title">柚子</p>
+  </a>
+</div>
+
+<div id="apDiv25" class="pic_bg_grey">
+  <a href="/record">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+    <p class="title">桔子</p>
+  </a>
+</div> -->
+
+
+<div id="apDiv40" class="pic_bg_grey">
+  <a href="record.html">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+  </a>
+</div>
+<div id="apDiv42" class="pic_bg_grey">
+  <a href="record.html">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+  </a>
+</div>
+<div id="apDiv45" class="pic_bg_grey">
+  <a href="record.html">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+  </a>
+</div>
+<div id="apDiv47" class="pic_bg_grey">
+  <a href="record.html">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+  </a>
+</div>
+<div id="apDiv48"></div>
+<div id="apDiv49" class="pic_bg_grey">
+  <a href="record.html">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+  </a>
+</div>
+<div id="apDiv50" class="pic_bg_grey">
+  <a href="record.html">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+  </a>
+</div>
+<div id="apDiv53" class="pic_bg_grey">
+  <a href="record.html">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+  </a>
+</div>
+<div id="apDiv55" class="pic_bg_grey">
+  <a href="record.html">
+    <img src="img/home/Homepage_Pic_Hamigua_Gray.png" class="pic" />
+  </a>
+</div>
+
+<div id="foot">
+  <div id="chapterList">
+    <a href="" class="link_chapterList">课程列表</a>
+  </div>
+  <div id="history">
+    <a href="" class="link_history">学习进度</a>
+  </div>
+  <div id="bbs">
+    <a href="" class="link_bbs">交流论坛</a>
+  </div>
+  <div id="userCenter">
+    <a href="" class="link_userCenter">个人中心</a>
+  </div>
+</div>
+</body>
+</html>

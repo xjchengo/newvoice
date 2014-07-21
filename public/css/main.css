@@ -1,0 +1,69 @@
+body{
+    background-color:#9ad7dc;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+}
+
+.login-wrapper {
+    margin-top: 80px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+
+.intro {
+    height: 486px;
+    width: 588px;
+    float: left;
+    background: url(../img/login/logo.png) no-repeat;
+    -webkit-background-size: cover;
+}
+
+.login-panel {
+    width: 30%;
+	margin-right:60px;
+    height: 400px;
+    float: right;
+    color: #FFF;
+    overflow: hidden;
+}
+
+.login-panel form {
+    margin-top: 150px;
+    margin-right: 50px;
+}
+
+.login-panel .form-row {
+    width: 300px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.login-panel .form-row label {
+    float: left;
+    margin-top: 8px;
+}
+
+.login-panel .form-row .login-input {
+    float: right;
+    color: #000;
+    height: 34px;
+    width: 190px;
+    background:none;
+    border: 2px #FFF solid;
+    font-size:16px;
+    border-radius: 5px;
+	padding:5px;
+}
+
+.login-btn {
+    height: 40px;
+    width: 204px;
+    background-color: #fe744f;
+    border: none;
+    float: right;
+    border-radius: 5px;
+	letter-spacing:10px;
+}

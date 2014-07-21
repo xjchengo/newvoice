@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ZH">
+<head>
+<meta charset="UTF-8">
+<title>录音</title>
+<script type="text/javascript">
+navigator.getUserMedia = ( navigator.getUserMedia ||
+                       navigator.webkitGetUserMedia ||
+                       navigator.mozGetUserMedia ||
+                       navigator.msGetUserMedia);
+
+if (navigator.getUserMedia) {
+   navigator.getUserMedia (
+
+      // constraints
+      {
+         audio: true
+      },
+
+      // successCallback
+      function(localMediaStream) {
+         var video = document.querySelector('video');
+         video.src = window.URL.createObjectURL(localMediaStream);
+         // Do something with the video here, e.g. video.play()
+      },
+
+      // errorCallback
+      function(err) {
+         console.log("The following error occured: " + err);
+      }
+   );
+} else {
+   console.log("getUserMedia not supported");
+}
+</script>
+</head>
+<body>
+hello
+</body>
+</html>

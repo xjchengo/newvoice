@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+  <div id="container" style="width: 800px;height: 500px;margin-left:auto;margin-right:auto;"></div>
+  <script type="text/javascript">
+    $(function () {
+      $('#container').highcharts({
+        chart: {
+          type: 'area'
+        },
+        title: {
+          text: 'Historic and Estimated Worldwide Population Growth by Region'
+        },
+        subtitle: {
+          text: 'Source: Wikipedia.org'
+        },
+        xAxis: {
+          gridLineWidth: 1,
+          gridLineDashStyle: 'dot',
+          categories: ['6.20', '6.21', '6.22', '6.23', '6.24', '6.25'],
+          tickmarkPlacement: 'off',
+          title: {
+            enabled: false
+          },
+          lineColor: '#FF0000',
+          lineWidth: 5,
+        },
+        yAxis: {
+          gridLineWidth: 1,
+          gridLineDashStyle: 'dot',
+          lineColor: '#FF0000',
+          lineWidth: 5,
+          tickPosition: 'inside',
+          tickWidth: 2,
+          tickInterval: 1,
+
+          title: {
+            enabled: false
+          },
+          labels: {
+            enabled: false
+          },
+          startOnTick: false,
+        },
+        tooltip: {
+          shared: false,
+          valueSuffix: ' millions'
+        },
+        plotOptions: {
+          area: {
+            stacking: 'normal',
+            lineColor: '#666666',
+            lineWidth: 1,
+            marker: {
+              lineWidth: 1,
+              lineColor: '#666666'
+            },
+            dataLabels: {
+              enabled: true,
+              y: 25,
+            },
+          }
+        },
+        series: [{
+          name: 'Asia',
+          data: [2, 5, 6, 6, 7, 5]
+        }, {
+          name: 'Africa',
+          data: [3, 2, 1, 6, 4, 3]
+        }]
+      });
+    });
+</script>
+</body>
+</html>

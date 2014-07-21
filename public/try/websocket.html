@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About my little app</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var exampleSocket = new WebSocket("ws://newvoice.me:8888", 'lws-mirror-protocol');
+  exampleSocket.onopen = function (event) {
+    console.log(event);
+    console.log('open');
+    exampleSocket.send("Here's some text that the server is urgently awaiting!");
+  };
+  exampleSocket.onmessage = function (event) {
+    console.log(event.data);
+  }
+/*  exampleSocket.onclose = function (event) {
+    console.log(event);
+  }*/
+
+  exampleSocket.onerror = function (event) {
+    console.log(event);
+  }
+  </script>
+</body>
+</html>

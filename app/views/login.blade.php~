@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ZH">
+<head>
+  <meta charset="utf-8">
+  <title>新声-登陆</title>
+  <meta name="description" content="新声-听障儿童语言训练辅助工具">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ HTML::style('css/home.css') }}
+</head>
+
+<body>
+{{ Form::open(array( 'id'=>'login-form', 'url' => 'login')) }}
+  <div class="main">
+    <div id="logo_pic"></div>
+    <div id="login_content">
+      <p>
+        {{ $errors->first('username') }}
+        {{ $errors->first('password') }}
+      </p>
+      <div class="login_bar">
+        <div class="login_text">用户名</div>
+        {{ Form::text('username', Input::old('username'), array('class' => 'login_input')) }}
+      </div>
+      <div class="login_bar">
+        <div class="login_text">密  &nbsp; &nbsp;码</div>
+        {{ Form::password('password', array('class' => 'login_input')) }}
+      </div>
+      <input type="submit" id="login_submit" value=""/>
+      {{ Form::submit('', array('id'=>'login_submit')) }}
+      <input type="button" id="login_signin" value=""/>
+    </div>
+  </div>
+{{ Form::close() }}
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ZH">
+<head>
+  <meta charset="UTF-8">
+  <title>录音识别测试</title>
+  <script src="//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+  <audio controls autoplay></audio>
+  <script type="text/javascript" src="recorder.js"> </script>
+  <fieldset><legend>RECORD AUDIO</legend>
+    <input class="start" onclick="startRecording()" type="button" value="start recording">
+    <input class="stop" onclick="stopRecording()" type="button" value="stop recording and play" disabled>
+  </fieldset>
+  <script>
+    var onFail = function(e) {
+      console.log('Rejected!', e);
+    };
+
+    var onSuccess = function(s) {
+      var context = new webkitAudioContext();
+      var mediaStreamSource = context.createMediaStreamSource(s);
+      hasGetUserMedia = true;
+      recorder = new Recorder(mediaStreamSource);
+      recorder.record();
+
+            // audio loopback
+            // mediaStreamSource.connect(context.destination);
+          }
+
+          window.URL = window.URL || window.webkitURL;
+          navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+          var recorder;
+          var audio = document.querySelector('audio');
+          var audioConstraints = {
+            "audio" : true
+          } 
+          var hasGetUserMedia = false;
+
+          function startRecording() {
+            $('.start').attr('disabled', true);
+            $('.stop').removeAttr('disabled');
+            if (hasGetUserMedia == false) {
+              if (navigator.getUserMedia) {
+                navigator.getUserMedia(audioConstraints, onSuccess, onFail);
+              } else {
+                console.log('navigator.getUserMedia not present');
+              }
+            } else {
+              audio.src = '';
+              recorder.record();
+            }
+            
+          }
+
+          function stopRecording() {
+            $('.stop').attr('disabled', true);
+            $('.start').removeAttr('disabled');
+            recorder.stop();
+            recorder.exportWAV(function(s) {
+              audio.src = window.URL.createObjectURL(s);
+              // Recorder.forceDownload(s);
+              upload(s);
+            });
+            recorder.clear();
+
+          }
+          function upload(blob) { 
+            var xhr=new XMLHttpRequest(); 
+            var ret;
+            xhr.onload=function(e) { 
+              if(this.readyState === 4) { 
+                ret = $.parseJSON(e.target.responseText);
+                if (ret.success) {
+                  alert('识别结果：'+ret.character+'\n'+'拼音：'+ret.pinyin);
+                } else {
+                  alert(ret.msg);
+                }
+                console.log("Server returned: ",e.target.responseText);
+
+              }
+            }; 
+            var fd=new FormData();
+            fd.append("wav",blob); 
+            xhr.open("POST","upload.php",true); 
+            xhr.send(fd);
+          }
+        </script>
+      </body>
+      </html>

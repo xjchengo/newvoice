@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>learning</title>
+  {{ HTML::style('css/learn.css') }}
+  {{ HTML::script('js/jquery-2.1.1.js') }} 
+  {{ HTML::script('recorder.js') }}
+</head>
+
+<body>
+  <div class="content_left">
+    <video src="{{ $lecture->video_path }}" autoplay loop></video>
+    <div class="btn_play">
+    </div>
+  </div>
+  <div class="content_right">
+    <video id="child" autoplay></video>
+  </div>
+  <div id="foot">
+    <button id="btn_toolBar"></button>
+    <div id="cloud_word">
+    <div class="word">   {{ $lecture->name }}</div>
+     <img class="pic" src="{{ $lecture->yes_pic_path }}" />
+   </div>
+   <div class="tongue_bg"><div class="tongue"></div></div>
+   <div id="cloud_pinyin">
+    <div class="pinyin">pú tao</div>
+    <img class="pic" src="/img/learning/Learningpage_StarIntoBottle.png" />
+  </div>
+  <!--滑动效果出现-->
+  <div id="tool_bar" style="display:none">
+    <a href="home.html" class="link_chapterList" >课程列表</a>
+    <a href="" class="link_wordHistory" >学习记录</a>
+    <a href="record.html" class="link_record" >重录视频</a>
+    <button id="btn_toolBar_back"></button>
+  </div>
+</div>
+<script type="text/javascript">
+  var video = document.querySelector('#child');
+  video.width = 320; //video.clientWidth;
+  video.height = 240;
+  navigator.getUserMedia = (navigator.getUserMedia ||
+      navigator.webkitGetUserMedia ||
+      navigator.mozGetUserMedia ||
+      navigator.msGetUserMedia);
+  if (navigator.getUserMedia) {
+      navigator.getUserMedia(
+
+        // constraints
+        {
+          video: true,
+          audio: true,
+        },
+
+        // successCallback
+        function (localMediaStream) {
+          video.src = window.URL.createObjectURL(localMediaStream);
+
+          // Do something with the video here, e.g. video.play()
+        },
+
+        // errorCallback
+        function (err) {
+          console.log("The following error occured: " + err);
+        }
+      );
+    } else {
+      console.log("getUserMedia not supported");
+    }
+    var onFail = function(e) {
+      console.log('Rejected!', e);
+    };
+
+    var onSuccess = function(s) {
+      var context = new webkitAudioContext();
+      var mediaStreamSource = context.createMediaStreamSource(s);
+      hasGetUserMedia = true;
+      recorder = new Recorder(mediaStreamSource);
+      recorder.record();
+    }
+    var recorder;
+    var audioConstraints = {
+      "audio" : true
+    }
+    var hasGetUserMedia = false;
+    var isRecord = false;
+    function startRecording() {
+      isRecord = true;
+      if (hasGetUserMedia == false) {
+        if (navigator.getUserMedia) {
+          navigator.getUserMedia(audioConstraints, onSuccess, onFail);
+        } else {
+          console.log('navigator.getUserMedia not present');
+        }
+      } else {
+        recorder.record();
+      }
+      
+    }
+
+    function stopRecording() {
+      isRecord = false;
+      recorder.stop();
+      recorder.exportWAV(function(s) {
+        // Recorder.forceDownload(s);
+        upload(s);
+      });
+      recorder.clear();
+
+    }
+    function upload(blob) { 
+      var xhr=new XMLHttpRequest(); 
+      var ret;
+      xhr.onload=function(e) { 
+        if(this.readyState === 4) { 
+          ret = $.parseJSON(e.target.responseText);
+          if (ret.success) {
+            if (ret.pinyin) {
+              $.post("{{ url('try', array($lecture->id)) }}",
+                {path:ret.path,pinyin:ret.pinyin}
+              );
+            }
+            alert('识别结果：'+ret.character+'\n'+'拼音：'+ret.pinyin);
+          } else {
+            alert(ret.msg);
+          }
+          
+          console.log("Server returned: ",e.target.responseText);
+
+        }
+      }; 
+      var fd=new FormData();
+      fd.append("wav",blob); 
+      xhr.open("POST","/upload.php",true); 
+      xhr.send(fd);
+    }
+
+    $("html").keydown(function( event ) {
+      if (event.which == 32 && isRecord == false) {
+        startRecording();
+        console.log('down:'+event.which);
+      }
+    });
+    $("html").keyup(function( event ) {
+      if (event.which == 32 && isRecord == true) {
+        stopRecording();
+        console.log('up:'+event.which);
+      }
+    });
+</script>
+</body>
+</html>

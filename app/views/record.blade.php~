@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>record</title>
+  {{ HTML::style('css/record.css') }} 
+  {{ HTML::script('js/jquery-2.1.1.js') }} 
+  {{ HTML::script('js/whammy.js') }}
+  {{ HTML::script('recorder.js') }}
+  <style type="text/css">
+    video {
+      z-index: 0;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="content_left">
+    <div class="record_top">
+      <div class="record_time">00:00</div>
+    </div>
+    <video id="record_video">
+      Your browser does not support the <code>video</code> element.
+    </video>
+    <div class="record_foot" id="start">
+      <a class="btn_left btn_back " href="/home"></a>
+      <button class="btn_mid btn_start"></button>
+    </div>
+    <div class="record_foot" id="pause">
+      <button class="btn_mid btn_recordPause"></button>
+    </div>
+    <div class="record_foot" id="finish">
+      <button class="btn_left btn_cancel"></button>
+      <button class="btn_mid btn_replay"></button>
+      <button class="btn_right btn_confirm"></button>
+    </div>
+    <div class="record_foot" id="return-finish">
+      <button class="btn_mid btn_pause"></button>
+    </div>
+  </div>
+  <div class="content_right">
+    <div class="stone"></div>
+    <div class="tree"></div>
+    <div class="line"></div>
+    <div class="word_bg">
+      <img src="/img/record/Recordpage_Pic_Grape.png" class="word_pic" />
+    </div>
+    <div class="word_pinyin">{{ $lecture->pinyin }}</div>
+    <div class="word">{{ $lecture->name }}</div>
+  </div>
+  <script type="text/javascript">
+    var video = document.querySelector('video');
+    var canvas = document.createElement('canvas');
+    var localMedia;
+    var webmBlob;
+    var elapsed_time;
+
+    video.width = 600; //video.clientWidth;
+    video.height = 450;
+    canvas.width = video.width;
+    canvas.height = video.height;
+    navigator.getUserMedia = (navigator.getUserMedia ||
+      navigator.webkitGetUserMedia ||
+      navigator.mozGetUserMedia ||
+      navigator.msGetUserMedia);
+    window.requestAnimationFrame = window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame ||
+      window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+
+    window.cancelAnimationFrame = window.cancelAnimationFrame ||
+      window.webkitCancelAnimationFrame || window.mozCancelAnimationFrame ||
+      window.msCancelAnimationFrame || window.oCancelAnimationFrame;
+
+    if (navigator.getUserMedia) {
+      navigator.getUserMedia(
+        {
+        // constraints
+          video: {
+            mandatory: {
+              minWidth: video.width,
+              minHeight: video.height
+            }
+          }
+        },
+
+        // successCallback
+        function (localMediaStream) {
+          var video = document.querySelector('video');
+          video.src = window.URL.createObjectURL(localMediaStream);
+          localMedia = video.src;
+          // Do something with the video here, e.g. video.play()
+        },
+
+        // errorCallback
+        function (err) {
+          console.log("The following error occured: " + err);
+        }
+      );
+    } else {
+      console.log("getUserMedia not supported");
+    }
+    var btn_start = document.querySelector(".btn_start");
+    var btn_pause = document.querySelector(".btn_recordPause");
+    var btn_replay = document.querySelector(".btn_replay");
+    var btn_return_finish = document.querySelector(".btn_pause");
+    var btn_confirm = document.querySelector(".btn_confirm");
+    var btn_cancel = document.querySelector(".btn_cancel");
+    var record_time = document.querySelector(".record_time");
+    var startTime;
+    btn_start.onclick = function () {
+      //http://ericbidelman.tumblr.com/post/31486670538/creating-webm-video-from-getusermedia
+      
+      var ctx = canvas.getContext('2d');
+      var CANVAS_HEIGHT = canvas.height;
+      var CANVAS_WIDTH = canvas.width;
+      frames = []; // clear existing frames;
+      startTime = Date.now();
+      video.play();
+      display(2);
+
+      function drawVideoFrame_(time) {
+        rafId = requestAnimationFrame(drawVideoFrame_);
+
+        ctx.drawImage(video, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+        elapsed_time = parseInt((Date.now() - startTime) / 1000);
+        var minutes = parseInt(elapsed_time / 60);
+        var seconds = parseInt(elapsed_time % 60);
+        record_time.innerHTML = pad(minutes, 2) + ':' + pad(seconds, 2);
+
+        // Read back canvas as webp.
+        //console.time('canvas.dataURL() took');
+        var url = canvas.toDataURL('image/webp', 0.5); // image/jpeg is way faster :(
+        //console.timeEnd('canvas.dataURL() took');
+        frames.push(url);
+      };
+
+      rafId = requestAnimationFrame(drawVideoFrame_);
+    };
+
+    btn_pause.onclick = function () {
+      video.pause();
+      display(3);
+      cancelAnimationFrame(rafId);
+      endTime = Date.now();
+      console.log('frames captured: ' + frames.length + ' => ' +
+        ((endTime - startTime) / 1000) + 's video');
+
+      webmBlob = Whammy.fromImageArray(frames, 1000 / 60);
+      video_url = window.URL.createObjectURL(webmBlob);
+    };
+
+    btn_replay.onclick = function () {
+      video.src = video_url;
+      video.play();
+      display(4);
+      startTime = Date.now();
+      function drawVideoTime(time) {
+        rafId = requestAnimationFrame(drawVideoTime);
+        var et = parseInt((Date.now() - startTime) / 1000);
+        var minutes = parseInt(et / 60);
+        var seconds = parseInt(et % 60);
+        record_time.innerHTML = pad(minutes, 2) + ':' + pad(seconds, 2);
+      };
+      rafId = requestAnimationFrame(drawVideoTime);
+      console.log(elapsed_time);
+      timeoutId = setTimeout(function () {
+        display(3);
+        cancelAnimationFrame(rafId);
+      },elapsed_time*1000);
+    };
+
+    btn_return_finish.onclick = function () {
+      video.pause();
+      display(3);
+      cancelAnimationFrame(rafId);
+      clearTimeout(timeoutId);
+    }
+
+    btn_confirm.onclick = function () {
+      upload(webmBlob);
+      alert('upload');
+    };
+
+    btn_cancel.onclick = function () {
+      display(1);
+    }
+
+
+    var start_foot = document.querySelector("#start");
+    var pause_foot = document.querySelector("#pause");
+    var finish_foot = document.querySelector("#finish");
+    var return_finish = document.querySelector("#return-finish");
+    display(1);
+
+    function display(which) {
+      start_foot.style.display = "none";
+      pause_foot.style.display = "none";
+      finish_foot.style.display = "none";
+      return_finish.style.display = "none";
+      if (which == 1) {
+        start_foot.style.display = "block";
+      } else if (which == 2) {
+        pause_foot.style.display = "block";
+      } else if (which == 3) {
+        finish_foot.style.display = "block";
+      } else if (which == 4) {
+        return_finish.style.display = "block";
+      }
+    }
+
+    function upload(blob) {
+      var xhr = new XMLHttpRequest();
+      var ret;
+      xhr.onload = function (e) {
+        if (this.readyState === 4) {
+          ret = $.parseJSON(e.target.responseText);
+
+          console.log("Server returned: ", e.target.responseText);
+
+        }
+      };
+      var fd = new FormData();
+      fd.append("webm", blob);
+      xhr.open("POST", "/uploadWebm/{{ $lecture->id }}", true);
+      xhr.send(fd);
+    }
+
+    function pad(num, size) {
+        var s = num+"";
+        while (s.length < size) s = "0" + s;
+        return s;
+    }
+  </script>
+</body>
+
+</html>
